@@ -31,5 +31,10 @@ namespace softersko_inzenjerstvo_projekat
         {
 
         }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
