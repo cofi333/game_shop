@@ -41,6 +41,7 @@ namespace softersko_inzenjerstvo_projekat
             MessageBox.Show("Game deleted");
             game_list.Clear();
             loadData();
+            Console.WriteLine("hi");
         }
 
 
