@@ -16,5 +16,20 @@ namespace softersko_inzenjerstvo_projekat
         {
             InitializeComponent();
         }
+
+        private void add_game_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void update_game_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void delete_game_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
