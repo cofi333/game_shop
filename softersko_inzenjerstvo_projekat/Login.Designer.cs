@@ -35,7 +35,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.checkBtn_show_password = new System.Windows.Forms.CheckBox();
             this.login_button = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -119,24 +118,12 @@
             this.login_button.UseVisualStyleBackColor = false;
             this.login_button.Click += new System.EventHandler(this.login_button_Click);
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Quicksand", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(73, 465);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(153, 19);
-            this.label5.TabIndex = 12;
-            this.label5.Text = "Don\'t have an account?";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
-            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(313, 639);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.login_button);
             this.Controls.Add(this.checkBtn_show_password);
             this.Controls.Add(this.txt_password);
@@ -161,6 +148,5 @@
         private Label label2;
         private CheckBox checkBtn_show_password;
         private Button login_button;
-        private Label label5;
     }
 }

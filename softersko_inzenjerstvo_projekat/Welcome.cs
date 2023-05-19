@@ -21,17 +21,9 @@ namespace softersko_inzenjerstvo_projekat
 
         private void button1_Click(object sender, EventArgs e)
         {
-            new Register().Show();
-            this.Hide();
-        }
-
-
-        private void label5_Click(object sender, EventArgs e)
-        {
             new Login().Show();
             this.Hide();
         }
 
-       
     }
 }

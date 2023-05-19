@@ -32,7 +32,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -66,20 +65,9 @@
             this.button1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.button1.Size = new System.Drawing.Size(210, 38);
             this.button1.TabIndex = 13;
-            this.button1.Text = "SIGN UP";
+            this.button1.Text = "SIGN IN";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Quicksand", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(60, 428);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(167, 19);
-            this.label5.TabIndex = 14;
-            this.label5.Text = "Already have an account?";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // Welcome
             // 
@@ -87,7 +75,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(300, 600);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
@@ -106,6 +93,5 @@
         private PictureBox pictureBox1;
         private Label label1;
         private Button button1;
-        private Label label5;
     }
 }
