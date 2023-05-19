@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 18, 2023 at 03:44 PM
+-- Generation Time: May 19, 2023 at 07:41 PM
 -- Server version: 10.4.25-MariaDB
 -- PHP Version: 8.1.10
 
@@ -30,29 +30,17 @@ SET time_zone = "+00:00";
 CREATE TABLE `games` (
   `game_id` int(11) NOT NULL,
   `game_name` varchar(30) NOT NULL,
-  `game_category` varchar(15) NOT NULL,
+  `game_category` varchar(35) NOT NULL,
   `game_picture` varchar(50) NOT NULL,
   `game_price` float NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- --------------------------------------------------------
-
 --
--- Table structure for table `users`
+-- Dumping data for table `games`
 --
 
-CREATE TABLE `users` (
-  `id_user` int(11) NOT NULL,
-  `username` varchar(25) NOT NULL,
-  `password` varchar(30) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `users`
---
-
-INSERT INTO `users` (`id_user`, `username`, `password`) VALUES
-(21, 'filip', '123');
+INSERT INTO `games` (`game_id`, `game_name`, `game_category`, `game_picture`, `game_price`) VALUES
+(1, 'Grand Theft Auto: San Andreas', 'action-adventure', 'gta_san_andreas.jpg', 20);
 
 --
 -- Indexes for dumped tables
@@ -65,12 +53,6 @@ ALTER TABLE `games`
   ADD PRIMARY KEY (`game_id`);
 
 --
--- Indexes for table `users`
---
-ALTER TABLE `users`
-  ADD PRIMARY KEY (`id_user`);
-
---
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -78,13 +60,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `games`
 --
 ALTER TABLE `games`
-  MODIFY `game_id` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `users`
---
-ALTER TABLE `users`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `game_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

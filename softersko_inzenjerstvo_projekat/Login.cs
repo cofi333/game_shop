@@ -25,7 +25,7 @@ namespace softersko_inzenjerstvo_projekat
             string con = "server=localhost;user=root;database=game_shop;password=";
             MySqlConnection mySqlconnection = new MySqlConnection(con);
             mySqlconnection.Open();
-            string login = "SELECT * FROM users WHERE username= '" + txt_username.Text + "'and password= '" + txt_password.Text + "'";
+            string login = "SELECT * FROM admin WHERE admin_username= '" + txt_username.Text + "'and admin_password= '" + txt_password.Text + "'";
             MySqlCommand cmd = new MySqlCommand(login, mySqlconnection);
             MySqlDataReader reader = cmd.ExecuteReader();
 
@@ -53,5 +53,10 @@ namespace softersko_inzenjerstvo_projekat
                
             }
         }
+<<<<<<< HEAD
+=======
+
+        
+>>>>>>> 45ba17d42d010d34dd942a936e20ce3b9c578393
     }
 }
