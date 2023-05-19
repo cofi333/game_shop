@@ -213,7 +213,7 @@
             this.show_games.Name = "show_games";
             this.show_games.Size = new System.Drawing.Size(602, 61);
             this.show_games.TabIndex = 15;
-            this.show_games.Text = "Show";
+            this.show_games.Text = "Refresh";
             this.show_games.UseVisualStyleBackColor = false;
             this.show_games.Click += new System.EventHandler(this.show_games_Click);
             // 

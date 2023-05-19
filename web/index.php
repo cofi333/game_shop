@@ -11,6 +11,7 @@ if (mysqli_num_rows($result) > 0)
     {
         echo "<p> $record[game_name] </p>";
         echo "<img src=\"../assets/$record[game_picture]\">";
+        echo "<p> $ $record[game_price]</p>";
     }
 
     mysqli_free_result($result);

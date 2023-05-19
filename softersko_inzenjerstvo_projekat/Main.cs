@@ -31,8 +31,18 @@ namespace softersko_inzenjerstvo_projekat
 
         private void delete_game_Click(object sender, EventArgs e)
         {
-
+            string con = "server=localhost;user=root;database=game_shop;password=";
+            MySqlConnection mySqlconnection = new MySqlConnection(con);
+            mySqlconnection.Open();
+            string id = gameID.Text.Trim();
+            string delete = "DELETE FROM games WHERE game_id = " + id;
+            MySqlCommand cmd = new MySqlCommand(delete, mySqlconnection);
+            int i = cmd.ExecuteNonQuery();
+            MessageBox.Show("Game deleted");
+            game_list.Clear();
+            loadData();
         }
+
 
         private void label3_Click(object sender, EventArgs e)
         {
@@ -41,7 +51,7 @@ namespace softersko_inzenjerstvo_projekat
 
         private void show_games_Click(object sender, EventArgs e)
         {
-            game_list.Items.Clear();
+            game_list.Clear();
             loadData();
             
         }
