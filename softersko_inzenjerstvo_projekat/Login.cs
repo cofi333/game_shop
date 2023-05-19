@@ -20,7 +20,6 @@ namespace softersko_inzenjerstvo_projekat
         }
 
       
-
         private void login_button_Click(object sender, EventArgs e)
         {
             string con = "server=localhost;user=root;database=game_shop;password=";
@@ -55,10 +54,9 @@ namespace softersko_inzenjerstvo_projekat
             }
         }
 
-        private void label5_Click(object sender, EventArgs e)
+        private void Login_Load(object sender, EventArgs e)
         {
-            new Register().Show();
-            this.Hide();
+
         }
     }
 }
