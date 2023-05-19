@@ -12,6 +12,7 @@ namespace softersko_inzenjerstvo_projekat
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
             Application.Run(new Welcome());
+            Console.WriteLine("Hello World");
         }
     }
 }
