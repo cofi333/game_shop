@@ -31,7 +31,7 @@
             this.update_game = new System.Windows.Forms.Button();
             this.delete_game = new System.Windows.Forms.Button();
             this.add_game = new System.Windows.Forms.Button();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.game_list = new System.Windows.Forms.ListView();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -44,13 +44,14 @@
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.show_games = new System.Windows.Forms.Button();
             this.sgr = new System.Windows.Forms.Label();
+            this.mySqlCommand1 = new MySql.Data.MySqlClient.MySqlCommand();
             this.SuspendLayout();
             // 
             // update_game
             // 
             this.update_game.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.update_game.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.update_game.Font = new System.Drawing.Font("Oxygen", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.update_game.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.update_game.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.update_game.Location = new System.Drawing.Point(12, 391);
             this.update_game.Name = "update_game";
@@ -64,7 +65,7 @@
             // 
             this.delete_game.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.delete_game.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.delete_game.Font = new System.Drawing.Font("Oxygen", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.delete_game.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.delete_game.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.delete_game.Location = new System.Drawing.Point(12, 458);
             this.delete_game.Name = "delete_game";
@@ -78,7 +79,7 @@
             // 
             this.add_game.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.add_game.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.add_game.Font = new System.Drawing.Font("Oxygen", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.add_game.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.add_game.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.add_game.Location = new System.Drawing.Point(12, 324);
             this.add_game.Name = "add_game";
@@ -88,13 +89,13 @@
             this.add_game.UseVisualStyleBackColor = false;
             this.add_game.Click += new System.EventHandler(this.add_game_Click);
             // 
-            // listView1
+            // game_list
             // 
-            this.listView1.Location = new System.Drawing.Point(332, 324);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(602, 128);
-            this.listView1.TabIndex = 4;
-            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.game_list.Location = new System.Drawing.Point(332, 324);
+            this.game_list.Name = "game_list";
+            this.game_list.Size = new System.Drawing.Size(602, 128);
+            this.game_list.TabIndex = 4;
+            this.game_list.UseCompatibleStateImageBehavior = false;
             // 
             // label1
             // 
@@ -206,7 +207,7 @@
             // 
             this.show_games.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.show_games.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.show_games.Font = new System.Drawing.Font("Oxygen", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.show_games.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.show_games.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.show_games.Location = new System.Drawing.Point(332, 458);
             this.show_games.Name = "show_games";
@@ -214,6 +215,7 @@
             this.show_games.TabIndex = 15;
             this.show_games.Text = "Show";
             this.show_games.UseVisualStyleBackColor = false;
+            this.show_games.Click += new System.EventHandler(this.show_games_Click);
             // 
             // sgr
             // 
@@ -226,6 +228,13 @@
             this.sgr.Size = new System.Drawing.Size(413, 48);
             this.sgr.TabIndex = 16;
             this.sgr.Text = "Game Shop Admin Panel";
+            // 
+            // mySqlCommand1
+            // 
+            this.mySqlCommand1.CacheAge = 0;
+            this.mySqlCommand1.Connection = null;
+            this.mySqlCommand1.EnableCaching = false;
+            this.mySqlCommand1.Transaction = null;
             // 
             // Main
             // 
@@ -244,13 +253,14 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.listView1);
+            this.Controls.Add(this.game_list);
             this.Controls.Add(this.add_game);
             this.Controls.Add(this.delete_game);
             this.Controls.Add(this.update_game);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "Main";
             this.Text = "Main";
+            this.Load += new System.EventHandler(this.Main_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -260,7 +270,7 @@
         private Button update_game;
         private Button delete_game;
         private Button add_game;
-        private ListView listView1;
+        private ListView game_list;
         private Label label1;
         private Label label2;
         private Label label3;
@@ -273,5 +283,6 @@
         private TextBox textBox5;
         private Button show_games;
         private Label sgr;
+        private MySql.Data.MySqlClient.MySqlCommand mySqlCommand1;
     }
 }
