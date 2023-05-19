@@ -53,10 +53,5 @@ namespace softersko_inzenjerstvo_projekat
                
             }
         }
-
-        private void Login_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }
