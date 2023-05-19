@@ -53,10 +53,6 @@ namespace softersko_inzenjerstvo_projekat
                
             }
         }
-<<<<<<< HEAD
-=======
 
-        
->>>>>>> 45ba17d42d010d34dd942a936e20ce3b9c578393
     }
 }
