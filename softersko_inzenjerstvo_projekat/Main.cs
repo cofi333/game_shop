@@ -11,6 +11,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
+// TODO - change goto_webiste button to linkLabel (style it, give it link and add it to groupBox)
+
 namespace softersko_inzenjerstvo_projekat
 {
     public partial class Main : Form
@@ -129,6 +131,11 @@ namespace softersko_inzenjerstvo_projekat
         private void creatAdmin_account_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void go_website_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            
         }
     }
 }
