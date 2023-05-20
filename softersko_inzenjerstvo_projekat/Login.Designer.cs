@@ -40,11 +40,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Russo One", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.label1.Location = new System.Drawing.Point(83, 111);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(131, 39);
+            this.label1.Size = new System.Drawing.Size(116, 37);
             this.label1.TabIndex = 0;
             this.label1.Text = "Sign In";
             // 
@@ -75,30 +75,30 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Quicksand", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label3.Location = new System.Drawing.Point(48, 281);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(84, 24);
+            this.label3.Size = new System.Drawing.Size(78, 20);
             this.label3.TabIndex = 7;
             this.label3.Text = "Password";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Quicksand", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label2.Location = new System.Drawing.Point(45, 218);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(87, 24);
+            this.label2.Size = new System.Drawing.Size(83, 20);
             this.label2.TabIndex = 6;
             this.label2.Text = "Username";
             // 
             // checkBtn_show_password
             // 
             this.checkBtn_show_password.AutoSize = true;
-            this.checkBtn_show_password.Font = new System.Drawing.Font("Quicksand", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.checkBtn_show_password.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.checkBtn_show_password.Location = new System.Drawing.Point(141, 357);
             this.checkBtn_show_password.Name = "checkBtn_show_password";
-            this.checkBtn_show_password.Size = new System.Drawing.Size(114, 22);
+            this.checkBtn_show_password.Size = new System.Drawing.Size(113, 19);
             this.checkBtn_show_password.TabIndex = 10;
             this.checkBtn_show_password.Text = "Show password";
             this.checkBtn_show_password.UseVisualStyleBackColor = true;
@@ -107,7 +107,8 @@
             // login_button
             // 
             this.login_button.BackColor = System.Drawing.Color.DarkSlateBlue;
-            this.login_button.Font = new System.Drawing.Font("Russo One", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.login_button.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.login_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.login_button.ForeColor = System.Drawing.Color.White;
             this.login_button.Location = new System.Drawing.Point(45, 411);
             this.login_button.Name = "login_button";
@@ -133,6 +134,7 @@
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Login";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sign In";
             this.ResumeLayout(false);
             this.PerformLayout();
