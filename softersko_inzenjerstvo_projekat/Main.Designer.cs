@@ -41,7 +41,7 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.aboutMessage = new System.Windows.Forms.Button();
             this.sign_out = new System.Windows.Forms.Button();
-            this.go_website = new System.Windows.Forms.LinkLabel();
+            this.exit_btn = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -180,7 +180,7 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.go_website);
+            this.groupBox2.Controls.Add(this.exit_btn);
             this.groupBox2.Controls.Add(this.aboutMessage);
             this.groupBox2.Controls.Add(this.sign_out);
             this.groupBox2.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -201,7 +201,7 @@
             this.aboutMessage.ForeColor = System.Drawing.Color.White;
             this.aboutMessage.Image = global::softersko_inzenjerstvo_projekat.Properties.Resources.info;
             this.aboutMessage.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.aboutMessage.Location = new System.Drawing.Point(6, 149);
+            this.aboutMessage.Location = new System.Drawing.Point(6, 67);
             this.aboutMessage.Name = "aboutMessage";
             this.aboutMessage.Size = new System.Drawing.Size(286, 63);
             this.aboutMessage.TabIndex = 6;
@@ -218,7 +218,7 @@
             this.sign_out.ForeColor = System.Drawing.Color.White;
             this.sign_out.Image = global::softersko_inzenjerstvo_projekat.Properties.Resources.logout;
             this.sign_out.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.sign_out.Location = new System.Drawing.Point(6, 218);
+            this.sign_out.Location = new System.Drawing.Point(6, 136);
             this.sign_out.Name = "sign_out";
             this.sign_out.Size = new System.Drawing.Size(286, 63);
             this.sign_out.TabIndex = 5;
@@ -226,27 +226,22 @@
             this.sign_out.UseVisualStyleBackColor = false;
             this.sign_out.Click += new System.EventHandler(this.sign_out_Click);
             // 
-            // go_website
+            // exit_btn
             // 
-            this.go_website.AutoSize = true;
-            this.go_website.BackColor = System.Drawing.Color.DarkSlateBlue;
-            this.go_website.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.go_website.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.go_website.Image = global::softersko_inzenjerstvo_projekat.Properties.Resources.web;
-            this.go_website.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.go_website.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
-            this.go_website.LinkColor = System.Drawing.Color.White;
-            this.go_website.Location = new System.Drawing.Point(7, 75);
-            this.go_website.Margin = new System.Windows.Forms.Padding(3);
-            this.go_website.Name = "go_website";
-            this.go_website.Padding = new System.Windows.Forms.Padding(80, 20, 81, 23);
-            this.go_website.Size = new System.Drawing.Size(283, 68);
-            this.go_website.TabIndex = 7;
-            this.go_website.TabStop = true;
-            this.go_website.Text = "Go to webiste";
-            this.go_website.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.go_website.VisitedLinkColor = System.Drawing.Color.Transparent;
-            this.go_website.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.go_website_LinkClicked);
+            this.exit_btn.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.exit_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.exit_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.exit_btn.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.exit_btn.ForeColor = System.Drawing.Color.White;
+            this.exit_btn.Image = global::softersko_inzenjerstvo_projekat.Properties.Resources.exit;
+            this.exit_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.exit_btn.Location = new System.Drawing.Point(6, 205);
+            this.exit_btn.Name = "exit_btn";
+            this.exit_btn.Size = new System.Drawing.Size(286, 63);
+            this.exit_btn.TabIndex = 7;
+            this.exit_btn.Text = "Exit";
+            this.exit_btn.UseVisualStyleBackColor = false;
+            this.exit_btn.Click += new System.EventHandler(this.exit_btn_Click);
             // 
             // Main
             // 
@@ -267,7 +262,6 @@
             this.Load += new System.EventHandler(this.Main_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -289,6 +283,6 @@
         private Button sign_out;
         private Button creatAdmin_account;
         private Button goto_website;
-        private LinkLabel go_website;
+        private Button exit_btn;
     }
 }

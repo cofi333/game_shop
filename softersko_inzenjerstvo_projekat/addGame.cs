@@ -45,7 +45,12 @@ namespace softersko_inzenjerstvo_projekat
             }
             else
             {
-               
+                gameID.Text = "";
+                gameName.Text = "";
+                gameCategory.Text = "";
+                gamePictureUrl.Text = "";
+                gamePictureName.Text = "";
+                gamePrice.Text = "";
                 MessageBox.Show("Game is inserted");
             }
 
@@ -74,6 +79,7 @@ namespace softersko_inzenjerstvo_projekat
             }
             catch (Exception ex)
             {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return null;
             }
 
