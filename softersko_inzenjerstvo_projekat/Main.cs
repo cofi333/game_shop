@@ -124,6 +124,9 @@ namespace softersko_inzenjerstvo_projekat
             game_list.Clear();
             loadData();
              */
+
+            new deleteGame().Show();
+            this.Hide();
             
         }
 
