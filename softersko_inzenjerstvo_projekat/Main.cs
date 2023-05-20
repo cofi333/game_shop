@@ -121,23 +121,17 @@ namespace softersko_inzenjerstvo_projekat
 
         private void deleteGameForm_Click(object sender, EventArgs e)
         {
-            //old deleteGame method
+            deleteGame dG = new deleteGame()
+            {
+                Dock = DockStyle.Fill,
+                TopLevel = false,
+                TopMost = true
+            };
 
-            /*
-             string con = "server=localhost;user=root;database=game_shop;password=";
-            MySqlConnection mySqlconnection = new MySqlConnection(con);
-            mySqlconnection.Open();
-            string id = gameID.Text.Trim();
-            string delete = "DELETE FROM games WHERE game_id = " + id;
-            MySqlCommand cmd = new MySqlCommand(delete, mySqlconnection);   
-            int i = cmd.ExecuteNonQuery();
-            MessageBox.Show("Game deleted");
-            game_list.Clear();
-            loadData();
-             */
-
-            new deleteGame().Show();
-            this.Hide();
+            dG.FormBorderStyle = FormBorderStyle.None;
+            panelFormControl.Controls.Clear();
+            this.panelFormControl.Controls.Add(dG);
+            dG.Show();
             
         }
 

@@ -90,5 +90,10 @@ namespace softersko_inzenjerstvo_projekat
 
 
         }
+
+        private void gameList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
