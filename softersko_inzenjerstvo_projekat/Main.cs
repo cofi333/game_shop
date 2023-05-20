@@ -20,47 +20,6 @@ namespace softersko_inzenjerstvo_projekat
             InitializeComponent();
         }
 
-<<<<<<< HEAD
-=======
-        private void add_game_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void update_game_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void delete_game_Click(object sender, EventArgs e)
-        {
-            string con = "server=localhost;user=root;database=game_shop;password=";
-            MySqlConnection mySqlconnection = new MySqlConnection(con);
-            mySqlconnection.Open();
-            string id = gameID.Text.Trim();
-            string delete = "DELETE FROM games WHERE game_id = " + id;
-            MySqlCommand cmd = new MySqlCommand(delete, mySqlconnection);
-            int i = cmd.ExecuteNonQuery();
-            MessageBox.Show("Game deleted");
-            game_list.Clear();
-            loadData();
-            Console.WriteLine("hi");
-        }
-
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void show_games_Click(object sender, EventArgs e)
-        {
-            game_list.Clear();
-            loadData();
-            
-        }
-
->>>>>>> 1963beb8783ea67768f5f577e266b3ca59ec8584
         private void Main_Load(object sender, EventArgs e)
         {
             loadData();
