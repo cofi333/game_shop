@@ -101,8 +101,17 @@ namespace softersko_inzenjerstvo_projekat
 
         private void addGameForm_Click(object sender, EventArgs e)
         {
-            new addGame().Show();
-            this.Hide();
+            addGame aG = new addGame()
+            {
+                Dock = DockStyle.Fill,
+                TopLevel = false,
+                TopMost = true
+            };
+
+            aG.FormBorderStyle = FormBorderStyle.None;
+            panelFormControl.Controls.Clear();
+            this.panelFormControl.Controls.Add(aG);
+            aG.Show();
         }
 
         private void updateGameForm_Click(object sender, EventArgs e)
@@ -120,7 +129,7 @@ namespace softersko_inzenjerstvo_projekat
             mySqlconnection.Open();
             string id = gameID.Text.Trim();
             string delete = "DELETE FROM games WHERE game_id = " + id;
-            MySqlCommand cmd = new MySqlCommand(delete, mySqlconnection);
+            MySqlCommand cmd = new MySqlCommand(delete, mySqlconnection);   
             int i = cmd.ExecuteNonQuery();
             MessageBox.Show("Game deleted");
             game_list.Clear();
