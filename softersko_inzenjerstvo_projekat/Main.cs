@@ -142,9 +142,6 @@ namespace softersko_inzenjerstvo_projekat
 
         private void go_website_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-<<<<<<< HEAD
-           
-=======
         }
 
         private void exit_btn_Click(object sender, EventArgs e)
@@ -160,7 +157,6 @@ namespace softersko_inzenjerstvo_projekat
                 this.Close();
             }
 
->>>>>>> b3e8a4f2ffaa78f98c07febd225afae87baa6c92
         }
     }
  }
