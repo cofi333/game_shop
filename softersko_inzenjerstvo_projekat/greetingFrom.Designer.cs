@@ -62,7 +62,7 @@
             this.Controls.Add(this.label1);
             this.Name = "greetingFrom";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "greetingFrom";
+            this.Text = "c";
             this.Load += new System.EventHandler(this.greetingFrom_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
