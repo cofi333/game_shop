@@ -41,7 +41,7 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.aboutMessage = new System.Windows.Forms.Button();
             this.sign_out = new System.Windows.Forms.Button();
-            this.goTo_website = new System.Windows.Forms.Button();
+            this.go_website = new System.Windows.Forms.LinkLabel();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -180,9 +180,9 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.go_website);
             this.groupBox2.Controls.Add(this.aboutMessage);
             this.groupBox2.Controls.Add(this.sign_out);
-            this.groupBox2.Controls.Add(this.goTo_website);
             this.groupBox2.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.groupBox2.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.groupBox2.Location = new System.Drawing.Point(12, 451);
@@ -226,21 +226,27 @@
             this.sign_out.UseVisualStyleBackColor = false;
             this.sign_out.Click += new System.EventHandler(this.sign_out_Click);
             // 
-            // goTo_website
+            // go_website
             // 
-            this.goTo_website.BackColor = System.Drawing.Color.DarkSlateBlue;
-            this.goTo_website.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.goTo_website.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.goTo_website.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.goTo_website.ForeColor = System.Drawing.Color.White;
-            this.goTo_website.Image = global::softersko_inzenjerstvo_projekat.Properties.Resources.web;
-            this.goTo_website.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.goTo_website.Location = new System.Drawing.Point(6, 80);
-            this.goTo_website.Name = "goTo_website";
-            this.goTo_website.Size = new System.Drawing.Size(286, 63);
-            this.goTo_website.TabIndex = 3;
-            this.goTo_website.Text = "Go to website";
-            this.goTo_website.UseVisualStyleBackColor = false;
+            this.go_website.AutoSize = true;
+            this.go_website.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.go_website.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.go_website.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.go_website.Image = global::softersko_inzenjerstvo_projekat.Properties.Resources.web;
+            this.go_website.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.go_website.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
+            this.go_website.LinkColor = System.Drawing.Color.White;
+            this.go_website.Location = new System.Drawing.Point(7, 75);
+            this.go_website.Margin = new System.Windows.Forms.Padding(3);
+            this.go_website.Name = "go_website";
+            this.go_website.Padding = new System.Windows.Forms.Padding(80, 20, 81, 23);
+            this.go_website.Size = new System.Drawing.Size(283, 68);
+            this.go_website.TabIndex = 7;
+            this.go_website.TabStop = true;
+            this.go_website.Text = "Go to webiste";
+            this.go_website.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.go_website.VisitedLinkColor = System.Drawing.Color.Transparent;
+            this.go_website.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.go_website_LinkClicked);
             // 
             // Main
             // 
@@ -261,6 +267,7 @@
             this.Load += new System.EventHandler(this.Main_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -270,7 +277,6 @@
         private MySql.Data.MySqlClient.MySqlCommand mySqlCommand1;
         private Button refreshView;
         private ListView game_list;
-        private Button goTo_website;
         private Button aboutMessage;
         private PictureBox pictureBox1;
         private Label gsap;
@@ -283,5 +289,6 @@
         private Button sign_out;
         private Button creatAdmin_account;
         private Button goto_website;
+        private LinkLabel go_website;
     }
 }
