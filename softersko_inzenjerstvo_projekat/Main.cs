@@ -101,7 +101,8 @@ namespace softersko_inzenjerstvo_projekat
 
         private void addGameForm_Click(object sender, EventArgs e)
         {
-
+            new addGame().Show();
+            this.Hide();
         }
 
         private void updateGameForm_Click(object sender, EventArgs e)
@@ -125,7 +126,7 @@ namespace softersko_inzenjerstvo_projekat
             game_list.Clear();
             loadData();
              */
-
+            
         }
 
         private void creatAdmin_account_Click(object sender, EventArgs e)
