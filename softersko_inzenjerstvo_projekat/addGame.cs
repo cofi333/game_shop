@@ -74,9 +74,10 @@ namespace softersko_inzenjerstvo_projekat
             }
             catch (Exception ex)
             {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return null;
             }
-
+            
             return image;
         }
 
