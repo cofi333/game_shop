@@ -137,6 +137,17 @@ namespace softersko_inzenjerstvo_projekat
 
         private void creatAdmin_account_Click(object sender, EventArgs e)
         {
+            createAdminAccount cAA = new createAdminAccount()
+            {
+                Dock = DockStyle.Fill,
+                TopLevel = false,
+                TopMost = true
+            };
+
+            cAA.FormBorderStyle = FormBorderStyle.None;
+            panelFormControl.Controls.Clear();
+            this.panelFormControl.Controls.Add(cAA);
+            cAA.Show();
 
         }
 
