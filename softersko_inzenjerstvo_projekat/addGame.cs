@@ -32,7 +32,7 @@ namespace softersko_inzenjerstvo_projekat
 
             string insert = "INSERT INTO games VALUES(@value0,@value1,@value2,@value3,@value4)";
             MySqlCommand cmd = new MySqlCommand(insert, mySqlconnection);
-            cmd.Parameters.AddWithValue("@value0", gameID.Text);
+            cmd.Parameters.AddWithValue("@value0", game_id.Text);
             cmd.Parameters.AddWithValue("@value1", gameName.Text);
             cmd.Parameters.AddWithValue("@value2", gameCategory.Text);
             cmd.Parameters.AddWithValue("@value3", gamePictureName.Text + ".jpg");
