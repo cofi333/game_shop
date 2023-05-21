@@ -82,7 +82,6 @@
             this.gameList.Name = "gameList";
             this.gameList.Size = new System.Drawing.Size(604, 29);
             this.gameList.TabIndex = 4;
-            this.gameList.SelectedIndexChanged += new System.EventHandler(this.gameList_SelectedIndexChanged);
             // 
             // label3
             // 
@@ -105,7 +104,6 @@
             this.gameName.Name = "gameName";
             this.gameName.Size = new System.Drawing.Size(604, 29);
             this.gameName.TabIndex = 8;
-            this.gameName.TextChanged += new System.EventHandler(this.gameName_TextChanged);
             // 
             // gameCategory
             // 
@@ -172,7 +170,6 @@
             this.gamePictureName.Name = "gamePictureName";
             this.gamePictureName.Size = new System.Drawing.Size(604, 29);
             this.gamePictureName.TabIndex = 14;
-            this.gamePictureName.TextChanged += new System.EventHandler(this.gamePictureName_TextChanged);
             // 
             // label7
             // 
@@ -211,6 +208,7 @@
             this.button1.TabIndex = 17;
             this.button1.Text = "Update Game";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // updateGame
             // 
