@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
+using System.Drawing.Text;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -25,11 +26,15 @@ namespace softersko_inzenjerstvo_projekat
         private void Main_Load(object sender, EventArgs e)
         {
             loadData();
+            defaultSession();
+        }
+
+        public void defaultSession()
+        {
             greetingFrom gF = new greetingFrom() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
             gF.FormBorderStyle = FormBorderStyle.None;
             this.panelFormControl.Controls.Add(gF);
             gF.Show();
-
         }
 
         public void loadData()
@@ -164,6 +169,89 @@ namespace softersko_inzenjerstvo_projekat
                 this.Close();
             }
 
+        }
+
+        private void groupBox3_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void open_website_Click(object sender, EventArgs e)
+        {
+            string path = "http://localhost/softersko/web";
+            System.Diagnostics.ProcessStartInfo startInfo = new System.Diagnostics.ProcessStartInfo
+            {
+                FileName = path,
+                //WorkingDirectory = @"C:\xampp\htdocs\index.php",
+                UseShellExecute = true
+            };
+
+            try
+            {
+                System.Diagnostics.Process.Start(startInfo);
+            }
+            catch (System.ComponentModel.Win32Exception ex)
+            {
+                // Handle any exceptions or display an error message
+                Console.WriteLine("Error: " + ex.Message);
+            }
+        }
+
+        private void open_mysql_Click(object sender, EventArgs e)
+        {
+            string path = "http://localhost/phpmyadmin";
+            System.Diagnostics.ProcessStartInfo startInfo = new System.Diagnostics.ProcessStartInfo
+            {
+                FileName = path,
+                //WorkingDirectory = @"C:\xampp\htdocs\index.php",
+                UseShellExecute = true
+            };
+
+            try
+            {
+                System.Diagnostics.Process.Start(startInfo);
+            }
+            catch (System.ComponentModel.Win32Exception ex)
+            {
+                // Handle any exceptions or display an error message
+                Console.WriteLine("Error: " + ex.Message);
+            }
+        }
+
+        private void endCurrent_session_Click(object sender, EventArgs e)
+        {
+            DialogResult Message;
+            Message = MessageBox.Show("You will discard your previous work!\nAre you sure you want to close this session?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (Message == DialogResult.No)
+            {
+                return;
+            }
+            else
+            {
+                panelFormControl.Controls.Clear();
+                defaultSession();
+            }
+        }
+
+        private void steamgridDB_Click(object sender, EventArgs e)
+        {
+            string path = "https://www.steamgriddb.com/";
+            System.Diagnostics.ProcessStartInfo startInfo = new System.Diagnostics.ProcessStartInfo
+            {
+                FileName = path,
+                //WorkingDirectory = @"C:\xampp\htdocs\index.php",
+                UseShellExecute = true
+            };
+
+            try
+            {
+                System.Diagnostics.Process.Start(startInfo);
+            }
+            catch (System.ComponentModel.Win32Exception ex)
+            {
+                // Handle any exceptions or display an error message
+                Console.WriteLine("Error: " + ex.Message);
+            }
         }
     }
  }

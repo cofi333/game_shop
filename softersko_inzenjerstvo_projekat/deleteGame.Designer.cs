@@ -50,13 +50,15 @@
             // 
             // gameList
             // 
-            this.gameList.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.gameList.AccessibleDescription = "";
+            this.gameList.AccessibleName = "";
+            this.gameList.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.gameList.Cursor = System.Windows.Forms.Cursors.Hand;
             this.gameList.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.gameList.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.gameList.ForeColor = System.Drawing.Color.White;
             this.gameList.FormattingEnabled = true;
-            this.gameList.Location = new System.Drawing.Point(189, 37);
+            this.gameList.Location = new System.Drawing.Point(180, 37);
             this.gameList.Name = "gameList";
             this.gameList.Size = new System.Drawing.Size(468, 25);
             this.gameList.TabIndex = 0;

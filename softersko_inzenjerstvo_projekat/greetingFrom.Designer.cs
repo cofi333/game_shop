@@ -28,20 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            this.greetingMsg = new System.Windows.Forms.Label();
             this.dateLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // label1
+            // greetingMsg
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.label1.Location = new System.Drawing.Point(84, 131);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(665, 46);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Howdy admin, what is on your mind today?\r\n";
+            this.greetingMsg.AutoSize = true;
+            this.greetingMsg.Font = new System.Drawing.Font("Segoe UI", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.greetingMsg.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.greetingMsg.Location = new System.Drawing.Point(84, 131);
+            this.greetingMsg.Name = "greetingMsg";
+            this.greetingMsg.Size = new System.Drawing.Size(109, 46);
+            this.greetingMsg.TabIndex = 0;
+            this.greetingMsg.Text = "label1";
             // 
             // dateLabel
             // 
@@ -59,7 +59,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(840, 310);
             this.Controls.Add(this.dateLabel);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.greetingMsg);
             this.Name = "greetingFrom";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "c";
@@ -73,5 +73,6 @@
 
         private Label label1;
         private Label dateLabel;
+        private Label greetingMsg;
     }
 }

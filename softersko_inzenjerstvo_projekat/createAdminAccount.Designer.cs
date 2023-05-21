@@ -41,70 +41,92 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(108, 41);
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.label1.Location = new System.Drawing.Point(73, 41);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(63, 15);
+            this.label1.Size = new System.Drawing.Size(84, 21);
             this.label1.TabIndex = 0;
             this.label1.Text = "Username:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(108, 89);
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label2.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.label2.Location = new System.Drawing.Point(73, 89);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(60, 15);
+            this.label2.Size = new System.Drawing.Size(79, 21);
             this.label2.TabIndex = 1;
             this.label2.Text = "Password:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(108, 129);
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label3.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.label3.Location = new System.Drawing.Point(73, 137);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(107, 15);
+            this.label3.Size = new System.Drawing.Size(141, 21);
             this.label3.TabIndex = 2;
             this.label3.Text = "Confirm password:";
             // 
             // adminUsername
             // 
-            this.adminUsername.Location = new System.Drawing.Point(232, 33);
+            this.adminUsername.BackColor = System.Drawing.SystemColors.Control;
+            this.adminUsername.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.adminUsername.Location = new System.Drawing.Point(281, 33);
             this.adminUsername.Name = "adminUsername";
-            this.adminUsername.Size = new System.Drawing.Size(461, 23);
+            this.adminUsername.Size = new System.Drawing.Size(547, 29);
             this.adminUsername.TabIndex = 3;
             // 
             // adminPassword
             // 
-            this.adminPassword.Location = new System.Drawing.Point(232, 81);
+            this.adminPassword.BackColor = System.Drawing.SystemColors.Control;
+            this.adminPassword.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.adminPassword.Location = new System.Drawing.Point(281, 81);
             this.adminPassword.Name = "adminPassword";
             this.adminPassword.PasswordChar = '●';
-            this.adminPassword.Size = new System.Drawing.Size(461, 23);
+            this.adminPassword.Size = new System.Drawing.Size(547, 29);
             this.adminPassword.TabIndex = 4;
             // 
             // adminConfirmPassword
             // 
-            this.adminConfirmPassword.Location = new System.Drawing.Point(232, 121);
+            this.adminConfirmPassword.BackColor = System.Drawing.SystemColors.Control;
+            this.adminConfirmPassword.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.adminConfirmPassword.Location = new System.Drawing.Point(281, 129);
             this.adminConfirmPassword.Name = "adminConfirmPassword";
             this.adminConfirmPassword.PasswordChar = '●';
-            this.adminConfirmPassword.Size = new System.Drawing.Size(461, 23);
+            this.adminConfirmPassword.Size = new System.Drawing.Size(547, 29);
             this.adminConfirmPassword.TabIndex = 5;
             // 
             // createAccountBtn
             // 
-            this.createAccountBtn.Location = new System.Drawing.Point(378, 219);
+            this.createAccountBtn.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.createAccountBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.createAccountBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.createAccountBtn.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.createAccountBtn.ForeColor = System.Drawing.Color.Transparent;
+            this.createAccountBtn.Image = global::softersko_inzenjerstvo_projekat.Properties.Resources.add;
+            this.createAccountBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.createAccountBtn.Location = new System.Drawing.Point(12, 237);
             this.createAccountBtn.Name = "createAccountBtn";
-            this.createAccountBtn.Size = new System.Drawing.Size(118, 23);
+            this.createAccountBtn.Size = new System.Drawing.Size(816, 61);
             this.createAccountBtn.TabIndex = 6;
             this.createAccountBtn.Text = "Create Account";
-            this.createAccountBtn.UseVisualStyleBackColor = true;
+            this.createAccountBtn.UseVisualStyleBackColor = false;
             this.createAccountBtn.Click += new System.EventHandler(this.createAccountBtn_Click);
             // 
             // checkBtn_show_password
             // 
             this.checkBtn_show_password.AutoSize = true;
-            this.checkBtn_show_password.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.checkBtn_show_password.Location = new System.Drawing.Point(580, 162);
+            this.checkBtn_show_password.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.checkBtn_show_password.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.checkBtn_show_password.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.checkBtn_show_password.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.checkBtn_show_password.Location = new System.Drawing.Point(689, 164);
             this.checkBtn_show_password.Name = "checkBtn_show_password";
-            this.checkBtn_show_password.Size = new System.Drawing.Size(113, 19);
+            this.checkBtn_show_password.Size = new System.Drawing.Size(136, 25);
             this.checkBtn_show_password.TabIndex = 11;
             this.checkBtn_show_password.Text = "Show password";
             this.checkBtn_show_password.UseVisualStyleBackColor = true;

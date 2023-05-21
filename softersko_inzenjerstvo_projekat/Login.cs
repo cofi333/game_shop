@@ -6,6 +6,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -29,8 +30,11 @@ namespace softersko_inzenjerstvo_projekat
             MySqlCommand cmd = new MySqlCommand(login, mySqlconnection);
             MySqlDataReader reader = cmd.ExecuteReader();
 
-            if(reader.Read() == true)
+
+
+            if (reader.Read() == true)
             {
+
                 new Main().Show();
                 this.Hide();
             }
@@ -54,5 +58,9 @@ namespace softersko_inzenjerstvo_projekat
             }
         }
 
+        private void Login_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
