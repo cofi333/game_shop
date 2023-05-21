@@ -26,13 +26,13 @@ namespace softersko_inzenjerstvo_projekat
 
             System.Drawing.Image image = DownloadImageFromUrl(gamePictureUrl.Text.Trim());
 
-            string rootPath = @"C:\xampp\htdocs\softersko\assets";
+            string rootPath = @"C:\xampp\htdocs\game_shop\assets";
             string fileName = System.IO.Path.Combine(rootPath, gamePictureName.Text + ".jpg");
             image.Save(fileName);
 
             string insert = "INSERT INTO games VALUES(@value0,@value1,@value2,@value3,@value4)";
             MySqlCommand cmd = new MySqlCommand(insert, mySqlconnection);
-            cmd.Parameters.AddWithValue("@value0", gameID.Text);
+            cmd.Parameters.AddWithValue("@value0", game_id.Text);
             cmd.Parameters.AddWithValue("@value1", gameName.Text);
             cmd.Parameters.AddWithValue("@value2", gameCategory.Text);
             cmd.Parameters.AddWithValue("@value3", gamePictureName.Text + ".jpg");

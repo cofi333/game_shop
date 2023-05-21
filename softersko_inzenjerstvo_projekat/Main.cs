@@ -178,7 +178,7 @@ namespace softersko_inzenjerstvo_projekat
 
         private void open_website_Click(object sender, EventArgs e)
         {
-            string path = "http://localhost/softersko/web";
+            string path = "http://localhost/game_shop/web";
             System.Diagnostics.ProcessStartInfo startInfo = new System.Diagnostics.ProcessStartInfo
             {
                 FileName = path,
