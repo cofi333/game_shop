@@ -45,7 +45,7 @@ namespace softersko_inzenjerstvo_projekat
             }
             else
             {
-                gameID.Text = "";
+                
                 gameName.Text = "";
                 gameCategory.Text = "";
                 gamePictureUrl.Text = "";

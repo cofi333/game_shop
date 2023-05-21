@@ -19,7 +19,8 @@ namespace softersko_inzenjerstvo_projekat
 
         private void greetingFrom_Load(object sender, EventArgs e) {
             //geting current date
-            DateTime today = DateTime.UtcNow;
+            DateTime today = DateTime.Now;
+            greetingMsg.Text = "Howdy admin, what is on your mind today?";
             dateLabel.Text = today.ToString();
         }
   
