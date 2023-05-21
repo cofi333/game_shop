@@ -121,7 +121,17 @@ namespace softersko_inzenjerstvo_projekat
 
         private void updateGameForm_Click(object sender, EventArgs e)
         {
+            updateGame uG = new updateGame()
+            {
+                Dock = DockStyle.Fill,
+                TopLevel = false,
+                TopMost = true
+            };
 
+            uG.FormBorderStyle = FormBorderStyle.None;
+            panelFormControl.Controls.Clear();
+            this.panelFormControl.Controls.Add(uG);
+            uG.Show();
         }
 
         private void deleteGameForm_Click(object sender, EventArgs e)
