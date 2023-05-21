@@ -77,5 +77,10 @@ namespace softersko_inzenjerstvo_projekat
         {
             
         }
+
+        private void gameName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
