@@ -82,7 +82,7 @@ namespace softersko_inzenjerstvo_projekat
                 MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return null;
             }
-
+            
             return image;
         }
 
