@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "Oxygen", sans-serif;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  background-color: #483d8b;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+header .navlogo {
+  display: flex;
+  align-items: center;
+  gap: 2em;
+  text-transform: uppercase;
+  color: white;
+}
+header .navlogo h2 {
+  cursor: default;
+}
+header .navlogo img {
+  width: 64px;
+  height: 64px;
+}
+header .navitems {
+  list-style: none;
+  display: flex;
+  gap: 2.5em;
+  align-items: center;
+}
+header .navitems li a {
+  color: white;
+  padding: 0.5em 1em 0.5em 1em;
+  border: transparent;
+  border-radius: 20px;
+  background-color: #7b68ee;
+  text-decoration: none;
+  transition: 0.5s;
+}
+header .navitems li a:hover {
+  background-color: white;
+  color: #7b68ee;
+}
+header .navitems li button {
+  padding: 0.5em 1em 0.5em 1em;
+  text-transform: uppercase;
+  font-size: 1em;
+  cursor: pointer;
+  color: white;
+  background-color: #7b68ee;
+  border: transparent;
+  border-radius: 20px;
+  transition: 0.5s;
+}
+header .navitems li button:hover {
+  background-color: white;
+  color: #7b68ee;
+}
+
+footer {
+  background-color: #483d8b;
+  color: white;
+  padding: 1.5em;
+  text-align: center;
+}
+
+#welcomePage {
+  background-image: url(../img/welcome.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 95vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#welcomePage h2 {
+  font-size: 6em;
+  color: white;
+  cursor: default;
+  overflow: hidden;
+  animation: entrance 2s ease 0s 1 normal forwards;
+}
+
+#gameMain {
+  padding: 5em;
+  background-image: url(../img/welcome.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  color: white;
+}
+#gameMain .games {
+  animation: games 2s ease 0s 1 normal forwards;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2em;
+}
+#gameMain .games .game {
+  background-color: #483d8b;
+  border: transparent;
+  border-radius: 10px;
+  padding: 1em;
+  text-align: center;
+  font-size: 1.2em;
+}
+#gameMain .games .game:hover {
+  cursor: pointer;
+  box-shadow: 0 0 3px black;
+  animation: hov 0.7s ease 0s 1 normal forwards;
+}
+#gameMain .games .game img {
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  border-radius: 15px;
+  width: 230px;
+  height: 350px;
+}
+
+@keyframes entrance {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes hov {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes games {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}/*# sourceMappingURL=index.css.map */
