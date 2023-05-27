@@ -89,6 +89,8 @@ namespace softersko_inzenjerstvo_projekat
             }
 
 
+            string sql = "SELECT * FROM `games`";
+            loadCombo(sql, "game_name", "game_id");
         }
 
         private void gameList_SelectedIndexChanged(object sender, EventArgs e)

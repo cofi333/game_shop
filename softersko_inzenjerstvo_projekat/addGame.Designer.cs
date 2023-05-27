@@ -39,7 +39,7 @@
             this.gamePictureName = new System.Windows.Forms.TextBox();
             this.gamePrice = new System.Windows.Forms.TextBox();
             this.addBtn = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.game_id = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -171,16 +171,16 @@
             this.addBtn.UseVisualStyleBackColor = false;
             this.addBtn.Click += new System.EventHandler(this.addBtn_Click);
             // 
-            // textBox1
+            // game_id
             // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.Control;
-            this.textBox1.Enabled = false;
-            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox1.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.textBox1.Location = new System.Drawing.Point(186, 20);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(642, 29);
-            this.textBox1.TabIndex = 14;
+            this.game_id.BackColor = System.Drawing.SystemColors.Control;
+            this.game_id.Enabled = false;
+            this.game_id.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.game_id.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.game_id.Location = new System.Drawing.Point(186, 20);
+            this.game_id.Name = "game_id";
+            this.game_id.Size = new System.Drawing.Size(642, 29);
+            this.game_id.TabIndex = 14;
             // 
             // label7
             // 
@@ -200,7 +200,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(840, 310);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.game_id);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.addBtn);
             this.Controls.Add(this.gamePrice);
@@ -235,7 +235,7 @@
         private TextBox gamePictureName;
         private TextBox gamePrice;
         private Button addBtn;
-        private TextBox textBox1;
+        private TextBox game_id;
         private Label label7;
     }
 }

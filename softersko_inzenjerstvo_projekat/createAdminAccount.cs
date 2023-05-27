@@ -59,6 +59,11 @@ namespace softersko_inzenjerstvo_projekat
 
 
             }
+
+            else
+            {
+                MessageBox.Show("Passwords does not match, please re-enter.", "Registration Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
        
 
