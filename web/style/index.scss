@@ -101,7 +101,7 @@ footer {
 
 //games section
 #gameMain {
-  padding: 5em;
+  padding: 12em;
   background-image: url(../img/welcome.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -120,6 +120,7 @@ footer {
       border: transparent;
       border-radius: 10px;
       padding: 1em;
+
       text-align: center;
       font-size: 1.2em;
       &:hover {
