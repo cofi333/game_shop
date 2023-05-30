@@ -1,6 +1,6 @@
 # game_shop
 Softersko inzenjerstvo - projekat
-Filip Kujundžić 
+Filip Kujundžić <br/> 
 Stefan Buljić
 
 # Installation
