@@ -2,10 +2,10 @@
 -- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: May 19, 2023 at 08:44 PM
--- Server version: 10.4.25-MariaDB
--- PHP Version: 8.1.10
+-- Host: localhost
+-- Generation Time: May 30, 2023 at 10:06 AM
+-- Server version: 10.4.27-MariaDB
+-- PHP Version: 8.2.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -20,18 +20,23 @@ SET time_zone = "+00:00";
 --
 -- Database: `game_shop`
 --
+CREATE DATABASE IF NOT EXISTS `game_shop` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE `game_shop`;
 
 -- --------------------------------------------------------
 
 --
 -- Table structure for table `admin`
 --
+-- Creation: May 30, 2023 at 08:05 AM
+--
 
-CREATE TABLE `admin` (
-  `admin_id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `admin` (
+  `admin_id` int(11) NOT NULL AUTO_INCREMENT,
   `admin_username` varchar(35) NOT NULL,
-  `admin_password` varchar(35) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `admin_password` varchar(35) NOT NULL,
+  PRIMARY KEY (`admin_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `admin`
@@ -45,14 +50,17 @@ INSERT INTO `admin` (`admin_id`, `admin_username`, `admin_password`) VALUES
 --
 -- Table structure for table `games`
 --
+-- Creation: May 30, 2023 at 08:05 AM
+--
 
-CREATE TABLE `games` (
-  `game_id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `games` (
+  `game_id` int(11) NOT NULL AUTO_INCREMENT,
   `game_name` varchar(30) NOT NULL,
   `game_category` varchar(35) NOT NULL,
   `game_picture` varchar(50) NOT NULL,
-  `game_price` float NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `game_price` float NOT NULL,
+  PRIMARY KEY (`game_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `games`
@@ -69,38 +77,6 @@ INSERT INTO `games` (`game_id`, `game_name`, `game_category`, `game_picture`, `g
 (8, 'Assassin\'s Creed III', 'action-adventure, stealth', 'assassin.jpg', 15),
 (9, 'Euro Truck Simulator 2', 'vehicle simulation', 'euro_truck2.jpg', 25),
 (10, 'The Sims 4', 'Social simulation', 'sims4.jpg', 30);
-
---
--- Indexes for dumped tables
---
-
---
--- Indexes for table `admin`
---
-ALTER TABLE `admin`
-  ADD PRIMARY KEY (`admin_id`);
-
---
--- Indexes for table `games`
---
-ALTER TABLE `games`
-  ADD PRIMARY KEY (`game_id`);
-
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `admin`
---
-ALTER TABLE `admin`
-  MODIFY `admin_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
---
--- AUTO_INCREMENT for table `games`
---
-ALTER TABLE `games`
-  MODIFY `game_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
