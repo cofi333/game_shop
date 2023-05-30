@@ -1,5 +1,7 @@
 # game_shop
 Softersko inzenjerstvo - projekat
+Filip Kujundžić 
+Stefan Buljić
 
 # Installation
 - Start localhost server `xampp` or `wampp`
