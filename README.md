@@ -1,5 +1,5 @@
 # game_shop
-Softersko inzenjerstvo - projekat
+Softersko inzenjerstvo - projekat <br/>
 Filip Kujundžić <br/> 
 Stefan Buljić
 
