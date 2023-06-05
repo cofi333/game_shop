@@ -8,7 +8,8 @@
   3. [Update](#update)
   4. [Delete](#delete)
   5. [Create admin](#create-admin)
-### 5. Web stranica
+### 5. [Web stranica](#web-stranica)
+### 6. [game_shop](#game-shop)
 
 <br/>
 
@@ -565,3 +566,10 @@ Korisnici i administratori nemaju mogućnost pristupa administrativnom delu sist
 
 ![web1.jpg](/assets/web1.jpg) <br/>
 ![web2.jpg](/assets/web2.jpg) 
+
+<br/>
+
+# game_shop
+Softversko inženjerstvo - projekat
+Filip Kujundžić, Stefan Buljić
+VTŠ Subotica 2023
