@@ -127,3 +127,11 @@ private void addBtn_Click(object sender, EventArgs e)
 <a href="delete"></a>
 ## Delete
 
+<a href="update"></a>
+## Update
+
+<a href="read"></a>
+## Read
+
+<a href="create-admin"></a>
+## Create admin
