@@ -1,4 +1,4 @@
-# Installation
+# Instalacija
 - Pokrenite lokalni server `xampp` ili `wampp`
 - Klonirajte repozitorijum u `htdocs` za xampp ili `www` za wampp server
 - Otvorite phpmyadmin i importujte `game_shop.sql` fajl
