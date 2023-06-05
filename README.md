@@ -223,6 +223,151 @@ public void loadData()
 <a href="update"></a>
 ## Update
 
+button1_Click metoda se izvršava kada admin izabere neku igricu iz padajuće liste, unese barem jedan podatak
+koji želi da izmeni i klikne na dugme Update game.
+
+button1_Click prvo vrši konektovanje sa bazom. 
+
+Izmena podataka se vrši tako što se prvo proveri da li je novi podatak koji je potreban da se unese
+unešen u text box.
+Primer: ako admin želi da promeni ime igrice. Preko if petlje se proverava da li je polje prazno.
+Ako nije prazno, preko sql naredbe se vrši promena u bazi. 
+
+````c#
+
+  if (!string.IsNullOrEmpty(gameName.Text))
+            {
+                string updateName = "UPDATE games SET game_name= '" + gameName.Text + "' WHERE game_id= '" + game + "'";
+                MySqlCommand cmd = new MySqlCommand(updateName, mySqlconnection);
+                cmd.ExecuteNonQuery();
+                updatedFields++;
+            }
+
+````
+
+Admin ima mogućnost da promeni i sliku igrice. Kao i kod Add Game, potrebna nam je downloadImageFromUrl
+metoda koja skida sliku sa linka koju joj prosledimo.
+
+````c#
+
+  public System.Drawing.Image DownloadImageFromUrl(string imageUrl)
+        {
+            System.Drawing.Image image = null;
+
+            try
+            {
+                System.Net.HttpWebRequest webRequest = (System.Net.HttpWebRequest)System.Net.HttpWebRequest.Create(imageUrl);
+                webRequest.AllowWriteStreamBuffering = true;
+                webRequest.Timeout = 30000;
+
+                System.Net.WebResponse webResponse = webRequest.GetResponse();
+
+                System.IO.Stream stream = webResponse.GetResponseStream();
+
+                image = System.Drawing.Image.FromStream(stream);
+
+                webResponse.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
+
+            return image;
+        }
+
+````
+
+Ukoliko je izvršena promena, preko messageBox se obaveštava admin da je igrica ažurirana.
+
+````c#
+
+ private void button1_Click(object sender, EventArgs e)
+        {
+            int updatedFields = 0;
+
+            string con = "server=localhost;user=root;database=game_shop;password=";
+            MySqlConnection mySqlconnection = new MySqlConnection(con);
+            mySqlconnection.Open();
+            string gameNum = gameList.SelectedValue.ToString();
+            int game = Int32.Parse(gameNum);
+
+
+            if (!string.IsNullOrEmpty(gameName.Text))
+            {
+                string updateName = "UPDATE games SET game_name= '" + gameName.Text + "' WHERE game_id= '" + game + "'";
+                MySqlCommand cmd = new MySqlCommand(updateName, mySqlconnection);
+                cmd.ExecuteNonQuery();
+                updatedFields++;
+            }
+
+            if (!string.IsNullOrEmpty(gameCategory.Text))
+            {
+                string updateCategory = "UPDATE games SET game_category= '" + gameCategory.Text + "' WHERE game_id= '" + game + "'";
+                MySqlCommand cmd = new MySqlCommand(updateCategory, mySqlconnection);
+                cmd.ExecuteNonQuery();
+                updatedFields++;
+            }
+
+           
+
+            if (!string.IsNullOrEmpty(gamePrice.Text))
+            {
+                string updateGamePrice = "UPDATE games SET game_price= '" + gamePrice.Text + "' WHERE game_id= '" + game + "'";
+                MySqlCommand cmd = new MySqlCommand(updateGamePrice, mySqlconnection);
+                cmd.ExecuteNonQuery();
+                updatedFields++;
+            }
+
+            if(!string.IsNullOrEmpty(gamePictureUrl.Text))
+            {
+                System.Drawing.Image image = DownloadImageFromUrl(gamePictureUrl.Text.Trim());
+
+                string rootPath = @"C:\xampp\htdocs\game_shop\assets";
+                string fileName = System.IO.Path.Combine(rootPath, gamePictureName.Text + ".jpg");
+                image.Save(fileName);
+                updatedFields++;
+            }
+
+            if (!string.IsNullOrEmpty(gamePictureName.Text))
+            {
+                string updatePictureName = "UPDATE games SET game_picture= '" + gamePictureName.Text + ".jpg" + "' WHERE game_id= '" + game + "'";
+                MySqlCommand cmd = new MySqlCommand(updatePictureName, mySqlconnection);
+                cmd.ExecuteNonQuery();
+                updatedFields++;
+            }
+
+            if (updatedFields > 0)
+            {
+                MessageBox.Show("Game updated!");
+                string sql = "SELECT * FROM `games`";
+                loadCombo(sql, "game_name", "game_id");
+                gameName.Text = "";
+                gameCategory.Text = "";
+                gamePrice.Text = "";
+                gamePictureUrl.Text = "";
+                gamePictureName.Text = "";
+
+
+            }
+            else
+            {
+                MessageBox.Show("Game not updated");
+            }
+
+            
+
+        }
+
+````
+
+ 
+
+
+
+
+
 <a href="delete"></a>
 ## Delete
 
