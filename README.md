@@ -28,11 +28,11 @@ Projekat u sebi sadrži i web stranicu napisanu u php8 jeziku, pa je veoma važn
 <br/>
 Zadatak ovog projekta je razvoj sistema za jednu prodavnicu igrica koja se sastoji od web sajta i admin aplikacije. Preko web sajta, korisnici mogu da vide prikaz svih igrica koja
 prodavnica sadrži. Admin aplikacija nam pruža mnoge mogućnosti a neke od njih su:
-1. unos novih igrica
-2. brisanje igrica
-3. mogućnost promene podataka igrice
-4. mogućnost kreiranja novog admin naloga
-5. prikaz svih igrica iz baze podataka
+  1. unos novih igrica
+  2. brisanje igrica
+  3. mogućnost promene podataka igrice
+  4. mogućnost kreiranja novog admin naloga
+  5. prikaz svih igrica iz baze podataka
 
 <br/>
 
