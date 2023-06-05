@@ -43,6 +43,8 @@ prodavnica sadrži. Admin aplikacija nam pruža mnoge mogućnosti a neke od njih
 
 <a href="funkcionalnosti"></a>
 # Funkcionalnosti
+Aplikacija se zasniva na CRUD operacijama nad bazom podataka <br/>
+Pored toga, admin ima mogućnost da direktno sa panela poseti veb stranicu, otvori bazu podataka sa slikama ili bazu podataka veb prodavnice
 <a href="create"></a>
 ## Create
 
