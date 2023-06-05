@@ -123,26 +123,4 @@ private void addBtn_Click(object sender, EventArgs e)
 
 
         }
-        
         ```
-        
-      
-        
-<a href="read"></a>
-## Read
-
-<a href="update"></a>
-## Update
-
-<a href="delete"></a>
-## Delete
-
-<a href="create-admin"></a>
-## Create admin
-
-<br/>
-
-# game_shop
-Softersko inženjerstvo - projekat <br/>
-Filip Kujundžić <br/> 
-Stefan Buljić
