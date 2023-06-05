@@ -8,6 +8,7 @@
   3. [Update](#update)
   4. [Delete](#delete)
   5. [Create admin](#create-admin)
+### 5. Web stranica
 
 <br/>
 
@@ -135,3 +136,12 @@ private void addBtn_Click(object sender, EventArgs e)
 
 <a href="create-admin"></a>
 ## Create admin
+
+<br/>
+
+<a href="web-stranica"></a>
+# Web stranica
+<br/>
+Web stranica ima mogućnost prikaza elemenata iz baze podataka. <br/>
+Stranica se osvežava momentalno nakon napravljenih izmena u bazi podataka <br/>
+Korisnici i administratori nemaju mogućnost pristupa administrativnom delu sistema sa veb sajta. <br/>
