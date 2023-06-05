@@ -1,11 +1,11 @@
+# Installation
+- Pokrenite lokalni server `xampp` ili `wampp`
+- Klonirajte repozitorijum u `htdocs` za xampp ili `www` za wampp server
+- Otvorite phpmyadmin i importujte `game_shop.sql` fajl
+- Pokrenite projekat u visual studio sa `.sln` fajlom ili otvorite kompajnilarni `.exe` fajl
+- `.exe` fajl možete pronaći na sledećoj lokaciji `~/game_shop/softersko_inzenjerstvo_projekat/bin/Release/net6.0-windows/softersko_inzenjerstvo_projekat.exe`
+
 # game_shop
-Softersko inzenjerstvo - projekat <br/>
+Softersko inženjerstvo - projekat <br/>
 Filip Kujundžić <br/> 
 Stefan Buljić
-
-# Installation
-- Start localhost server `xampp` or `wampp`
-- Clone this repo into your server `htdocs` for xampp | `www` for wampp
-- Open phpmyadmin and import `game_shop.sql`
-- Compile project with `.sln` or open `.exe` file
-- `.exe` can be fount at `~/game_shop/softersko_inzenjerstvo_projekat/bin/Release/net6.0-windows/softersko_inzenjerstvo_projekat.exe`
