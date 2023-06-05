@@ -1,6 +1,7 @@
 # Sadržaj 
 1. [Instalacija](#instalacija)
-2. [Specifikacija-projekta](#specifikacija-projekta)
+2. [Specifikacija projekta](#specifikacija-projekta)
+3. [Baza podataka](#baza-podataka)
 
 <br/>
 
@@ -26,6 +27,7 @@ prodavnica sadrži. Admin aplikacija nam pruža mnoge mogućnosti a neke od njih
 
 <br/>
 
+<a href="baza-podataka"></a>
 # Baza podataka
 ![baza.jpg](/assets/baza.jpg)
 
