@@ -1,6 +1,6 @@
 # Sadržaj 
 1. [Instalacija](#instalacija)
-2. [Specifikacija-projekta](#specifikacija)
+2. [Specifikacija-projekta](#specifikacija-projekta)
 
 <a href="instalacija"></a>
 # Instalacija
@@ -10,7 +10,7 @@
 - Pokrenite projekat u visual studio sa `.sln` fajlom ili otvorite kompajnilarni `.exe` fajl
 - `.exe` fajl možete pronaći na sledećoj lokaciji `~/game_shop/softersko_inzenjerstvo_projekat/bin/Release/net6.0-windows/softersko_inzenjerstvo_projekat.exe`
 
-<a href="specifikacija"></a>
+<a href="specifikacija-projekta"></a>
 # Specifikacija projekta
 Zadatak ovog projekta je razvoj sistema za jednu prodavnicu igrica koja se sastoji od web sajta i admin aplikacije. Preko web sajta, korisnici mogu da vide prikaz svih igrica koja
 prodavnica sadrži. Admin aplikacija nam pruža mnoge mogućnosti a neke od njih su:
