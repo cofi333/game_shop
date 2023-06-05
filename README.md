@@ -26,6 +26,9 @@ prodavnica sadrži. Admin aplikacija nam pruža mnoge mogućnosti a neke od njih
 
 <br/>
 
+# Baza podataka
+![baza.jpg](/assets/baza.jpg)
+
 # game_shop
 Softersko inženjerstvo - projekat <br/>
 Filip Kujundžić <br/> 
