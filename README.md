@@ -128,6 +128,98 @@ private void addBtn_Click(object sender, EventArgs e)
 <a href="read"></a>
 ## Read
 
+U admin aplikaciji, admin ima mogućnost da vidi sve igrice koje su trenutno upisane u bazu podataka.
+Kada se main prozor učita, izvrši se metoda loadData.
+
+loadData je metoda koja u listu dodaje podatke koji su u tabeli games u bazi podataka.
+
+Prvo se vrši konekcija na bazu.
+Nakon toga, u listu se dodaju potrebne kolene za prikaz jedne igrice.
+
+````c#
+
+game_list.Columns.Add("Id", 120);
+            game_list.Columns.Add("Name", 180);
+            game_list.Columns.Add("Category", 200);
+            game_list.Columns.Add("Picture", 180);
+            game_list.Columns.Add("Price", 60);
+            game_list.View = View.Details;
+
+````
+
+Kada imamo strukturu same liste, potrebno je preko sql naredbe da selektujemo sve igrice iz tabele.
+
+` cmd.CommandText = "SELECT * FROM games";`
+
+Nakon toga preko for petlje dodajemo igrice u kolone.
+
+````c#
+
+ for (int i = 0; i < dt.Rows.Count; i++)
+            {
+
+                DataRow dr = dt.Rows[i];
+                ListViewItem listitem = new ListViewItem(dr["game_id"].ToString());
+                listitem.SubItems.Add(dr["game_name"].ToString());
+                listitem.SubItems.Add(dr["game_category"].ToString());
+                listitem.SubItems.Add(dr["game_picture"].ToString());
+                listitem.SubItems.Add(dr["game_price"].ToString());
+                game_list.Items.Add(listitem);
+
+
+
+            }
+
+
+````
+
+
+loadData metoda se takođe izvršava ako admin klikne na dugme Refresh View u admin aplikaciji.
+
+````c#
+public void loadData()
+        {
+            string con = "server=localhost;user=root;database=game_shop;password=";
+            MySqlConnection mySqlconnection = new MySqlConnection(con);
+            DataTable dt;
+            MySqlDataAdapter da;
+            MySqlCommand cmd;
+
+            game_list.Columns.Add("Id", 120);
+            game_list.Columns.Add("Name", 180);
+            game_list.Columns.Add("Category", 200);
+            game_list.Columns.Add("Picture", 180);
+            game_list.Columns.Add("Price", 60);
+            game_list.View = View.Details;
+
+            cmd = new MySqlCommand();
+            cmd.Connection = mySqlconnection;
+            cmd.CommandText = "SELECT * FROM games";
+
+            da = new MySqlDataAdapter();
+            da.SelectCommand = cmd;
+            dt = new DataTable();
+            da.Fill(dt);
+
+
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+
+                DataRow dr = dt.Rows[i];
+                ListViewItem listitem = new ListViewItem(dr["game_id"].ToString());
+                listitem.SubItems.Add(dr["game_name"].ToString());
+                listitem.SubItems.Add(dr["game_category"].ToString());
+                listitem.SubItems.Add(dr["game_picture"].ToString());
+                listitem.SubItems.Add(dr["game_price"].ToString());
+                game_list.Items.Add(listitem);
+
+
+
+            }
+        }
+````
+
+
 <a href="update"></a>
 ## Update
 
