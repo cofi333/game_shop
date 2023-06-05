@@ -2,6 +2,7 @@
 1. [Instalacija](#instalacija)
 2. [Specifikacija projekta](#specifikacija-projekta)
 3. [Baza podataka](#baza-podataka)
+4. [Funkcionalnosti](#funkcionalnosti)
 
 <br/>
 
@@ -33,6 +34,10 @@ prodavnica sadrži. Admin aplikacija nam pruža mnoge mogućnosti a neke od njih
 
 <br/>
 
+<a href="funkcionalnosti"></a>
+# Funkcionalnosti
+
+<br/>
 # game_shop
 Softersko inženjerstvo - projekat <br/>
 Filip Kujundžić <br/> 
