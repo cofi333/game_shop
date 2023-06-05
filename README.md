@@ -243,6 +243,77 @@ loadCombo metodu potrebno je pozvati kada je admin uspešno izbrisao igricu iz b
 
 <a href="create-admin"></a>
 ## Create admin
+createaccountBtn_Click metoda se izvršava kada admin unese sva potrebna polja i klikne na dugme Create account.
+
+Prvo se vrši konekcija na bazu. Ukoliko je neka od polja ostalo prazno, preko MessageBox se ispisuje poruka
+da su polja prazna.
+Kada su podaci uneti, prvo se vrši provera da li su polja za password i confirm password ista.
+
+Ako jesu, proverava se da li admin sa tim imenom već postoji u bazi.
+
+`string check = "SELECT COUNT(*) FROM admin WHERE admin_username = @name";`
+
+Ukoliko postoji, izbacuje se poruka o grešci.
+
+Ako ne postoji, vrši se unos podataka u bazu podataka u tabelu admin.
+
+`string register = "INSERT INTO admin VALUES ('',@value1,@value2)";`
+
+@value1 parametar je ime admina. <br>
+@value2 parametar je šifra admina. <br>
+
+Ako je sve prošlo kako treba, ispisuje se poruka da je nalog uspešno kreiran.
+
+````c#
+
+ private void createAccountBtn_Click(object sender, EventArgs e)
+        {
+
+
+             if(adminUsername.Text =="" && adminPassword.Text=="" && adminConfirmPassword.Text == "")
+            {
+                MessageBox.Show("Username and Password fields are empty", "Registration Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+            else if (adminPassword.Text == adminConfirmPassword.Text)
+            {
+                string con = "server=localhost;user=root;database=game_shop;password=";
+                MySqlConnection mySqlconnection = new MySqlConnection(con);
+                mySqlconnection.Open();
+                string check = "SELECT COUNT(*) FROM admin WHERE admin_username = @name";
+                MySqlCommand checkCmd = new MySqlCommand(check, mySqlconnection);
+                checkCmd.Parameters.AddWithValue("@name", adminUsername.Text);
+                int userExist = Convert.ToInt32(checkCmd.ExecuteScalar());
+
+                if(userExist == 0)
+                {
+                    string register = "INSERT INTO admin VALUES ('',@value1,@value2)";
+                    MySqlCommand cmd = new MySqlCommand(register, mySqlconnection);
+                    cmd.Parameters.AddWithValue("@value1", adminUsername.Text);
+                    cmd.Parameters.AddWithValue("@value2", adminPassword.Text);
+                    cmd.ExecuteNonQuery();
+                    mySqlconnection.Close();
+
+                    MessageBox.Show("Your Account has been successfully created", "Registration Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+
+                else
+                {
+                    MessageBox.Show("Admin with that name already exist.", "Registration Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+
+
+            }
+
+            else
+            {
+                MessageBox.Show("Passwords does not match, please re-enter.", "Registration Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+
+````
 
 <br/>
 
