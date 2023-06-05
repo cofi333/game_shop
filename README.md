@@ -113,5 +113,5 @@ private void addBtn_Click(object sender, EventArgs e)
                 MessageBox.Show("Game is inserted");
             }
             mySqlconnection.Close();
-        }
-        ```
+ }
+ `
