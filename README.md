@@ -1,8 +1,8 @@
 # Sadržaj 
-1. [Instalacija](#instalacija)
-2. [Specifikacija projekta](#specifikacija-projekta)
-3. [Baza podataka](#baza-podataka)
-4. [Funkcionalnosti](#funkcionalnosti)
+## 1. [Instalacija](#instalacija)
+## 2. [Specifikacija projekta](#specifikacija-projekta)
+## 3. [Baza podataka](#baza-podataka)
+## 4. [Funkcionalnosti](#funkcionalnosti)
   1. [Create]
   2. [Read]
   3. [Update]
