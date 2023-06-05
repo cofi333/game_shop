@@ -13,6 +13,8 @@
 
 <a href="instalacija"></a>
 # Instalacija
+Projekat u sebi sadrži i web stranicu napisanu u php8 jeziku, pa je veoma važno da bude kloniran unutar nekog servera.
+<br/>
 - Pokrenite lokalni server `xampp` ili `wampp`
 - Klonirajte repozitorijum u `htdocs` za xampp ili `www` za wampp server
 - Otvorite phpmyadmin i importujte `game_shop.sql` fajl
