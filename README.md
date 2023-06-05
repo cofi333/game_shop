@@ -2,6 +2,8 @@
 1. [Instalacija](#instalacija)
 2. [Specifikacija-projekta](#specifikacija-projekta)
 
+<br/>
+
 <a href="instalacija"></a>
 # Instalacija
 - Pokrenite lokalni server `xampp` ili `wampp`
