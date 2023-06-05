@@ -82,19 +82,15 @@ fileName je ime slike koje admin zadaje preko gamePictureName text boxa.
 Nakon toga, ukoliko je sve prošlo kako treba, adminu se ispisuje poruka da je igrica dodata i polja za unos postaju prazna. Ukoliko je došlo do greške, ispisuje se da igrica nije uneta.
 
 ```
-
 private void addBtn_Click(object sender, EventArgs e)
-        {
-            string con = "server=localhost;user=root;database=game_shop;password=";
-            MySqlConnection mySqlconnection = new MySqlConnection(con);
-            mySqlconnection.Open();
-
-            System.Drawing.Image image = DownloadImageFromUrl(gamePictureUrl.Text.Trim());
-
+{
+      string con = "server=localhost;user=root;database=game_shop;password=";
+      MySqlConnection mySqlconnection = new MySqlConnection(con);
+      mySqlconnection.Open();
+      System.Drawing.Image image = DownloadImageFromUrl(gamePictureUrl.Text.Trim());
             string rootPath = @"C:\xampp\htdocs\game_shop\assets";
             string fileName = System.IO.Path.Combine(rootPath, gamePictureName.Text + ".jpg");
             image.Save(fileName);
-
             string insert = "INSERT INTO games VALUES(@value0,@value1,@value2,@value3,@value4)";
             MySqlCommand cmd = new MySqlCommand(insert, mySqlconnection);
             cmd.Parameters.AddWithValue("@value0", game_id.Text);
@@ -102,15 +98,13 @@ private void addBtn_Click(object sender, EventArgs e)
             cmd.Parameters.AddWithValue("@value2", gameCategory.Text);
             cmd.Parameters.AddWithValue("@value3", gamePictureName.Text + ".jpg");
             cmd.Parameters.AddWithValue("@value4", gamePrice.Text);
-
             int i = cmd.ExecuteNonQuery();
             if (i == 0)
             {
                 MessageBox.Show("Game is not insterted.");
             }
             else
-            {
-                
+            {     
                 gameName.Text = "";
                 gameCategory.Text = "";
                 gamePictureUrl.Text = "";
@@ -118,6 +112,6 @@ private void addBtn_Click(object sender, EventArgs e)
                 gamePrice.Text = "";
                 MessageBox.Show("Game is inserted");
             }
-
             mySqlconnection.Close();
-        }```
+        }
+        ```
