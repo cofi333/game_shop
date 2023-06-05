@@ -12,6 +12,8 @@
 - Pokrenite projekat u visual studio sa `.sln` fajlom ili otvorite kompajnilarni `.exe` fajl
 - `.exe` fajl možete pronaći na sledećoj lokaciji `~/game_shop/softersko_inzenjerstvo_projekat/bin/Release/net6.0-windows/softersko_inzenjerstvo_projekat.exe`
 
+<br/>
+
 <a href="specifikacija-projekta"></a>
 # Specifikacija projekta
 Zadatak ovog projekta je razvoj sistema za jednu prodavnicu igrica koja se sastoji od web sajta i admin aplikacije. Preko web sajta, korisnici mogu da vide prikaz svih igrica koja
