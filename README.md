@@ -56,16 +56,16 @@ pri čemu su sve funkcionalnosti nezavisne jedna od druge.
 <a href="create"></a>
 ## Create
 
-addBtn_Click metoda se poziva kada u main prozoru kliknemo na dugme Add Game. Metoda prvo vrši konekciju sa bazom. Kada smo uspešno povezani sa bazom,
+addBtn_Click metoda se poziva kada admin unese sve potrebne podatke i klikne na dugme Insert game. Metoda prvo vrši konekciju sa bazom. Kada smo uspešno povezani sa bazom,
 
 `string insert = "INSERT INTO games VALUES(@value0,@value1,@value2,@value3,@value4)";`
 
-upisuje podatke u bazu. @value su podaci koje admin unese preko text boxova.
-@value0 parametar je id igrice.
-@value1 parametar je ime igrice.
-@value2 parametar je kategorija igrice.
-@value3 parametar je ime slike.
-@value4 je cena igrice.
+upisuje podatke u bazu. @value su podaci koje admin unese preko text boxova. <br>
+@value0 parametar je id igrice. <br>
+@value1 parametar je ime igrice. <br>
+@value2 parametar je kategorija igrice. <br>
+@value3 parametar je ime slike. <br>
+@value4 je cena igrice. <br>
 
 Ova metoda takođe omogućuje adminu da postavi sliku same igrice. Da bi admin bio u mogućnosti da skine sliku
 koristi se DownloadImgeFromUrl metoda.
