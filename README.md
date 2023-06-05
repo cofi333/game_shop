@@ -3,6 +3,11 @@
 2. [Specifikacija projekta](#specifikacija-projekta)
 3. [Baza podataka](#baza-podataka)
 4. [Funkcionalnosti](#funkcionalnosti)
+  1. [Create]
+  2. [Read]
+  3. [Update]
+  4. [Delete]
+  5. [Create admin]
 
 <br/>
 
