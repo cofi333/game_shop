@@ -87,7 +87,9 @@ private void addBtn_Click(object sender, EventArgs e)
       string con = "server=localhost;user=root;database=game_shop;password=";
       MySqlConnection mySqlconnection = new MySqlConnection(con);
       mySqlconnection.Open();
+      
       System.Drawing.Image image = DownloadImageFromUrl(gamePictureUrl.Text.Trim());
+      
             string rootPath = @"C:\xampp\htdocs\game_shop\assets";
             string fileName = System.IO.Path.Combine(rootPath, gamePictureName.Text + ".jpg");
             image.Save(fileName);
@@ -99,10 +101,12 @@ private void addBtn_Click(object sender, EventArgs e)
             cmd.Parameters.AddWithValue("@value3", gamePictureName.Text + ".jpg");
             cmd.Parameters.AddWithValue("@value4", gamePrice.Text);
             int i = cmd.ExecuteNonQuery();
+            
             if (i == 0)
             {
                 MessageBox.Show("Game is not insterted.");
             }
+            
             else
             {     
                 gameName.Text = "";
@@ -112,6 +116,7 @@ private void addBtn_Click(object sender, EventArgs e)
                 gamePrice.Text = "";
                 MessageBox.Show("Game is inserted");
             }
+            
             mySqlconnection.Close();
  }
  ````
