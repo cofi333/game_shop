@@ -120,7 +120,8 @@ Nakon toga, ukoliko je sve prošlo kako treba, adminu se ispisuje poruka da je i
             mySqlconnection.Close();
 
 
-        }`
+        }
+        `
         
 <a href="read"></a>
 ## Read
