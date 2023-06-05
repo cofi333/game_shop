@@ -134,6 +134,110 @@ private void addBtn_Click(object sender, EventArgs e)
 <a href="delete"></a>
 ## Delete
 
+deleteBtn_Click metoda se izvršava kada korisnik iz padajuće liste izabere igricu, i klikne
+na dugme Delete game.
+
+deleteBtn_Click metoda prvo vrši konekciju na bazu.
+
+`string game = this.gameList.GetItemText(this.gameList.SelectedItem);`
+
+game je izabrana igrica iz padajuće liste. 
+
+Ukoliko je admin siguran da želi obrisati igricu iz baze, u sql naredbi prosleđujemo gore deklarisan string game,
+i ispisuje se poruka da je igrica obrisana.
+
+`  string delete = "DELETE FROM games WHERE game_name = " + "\"" + game + "\"";
+                MySqlCommand cmd = new MySqlCommand(delete, mySqlconnection);
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Game deleted");` ,
+
+loadCombo metoda omogućava automatsko prikazivanje nove liste iz baze.
+Potrebno je proslediti sql naredbu, ime igrice i id.
+
+````c#
+
+        private void loadCombo(string sql, string DisplayMember, string ValueMember)
+        {
+
+            string con = "server=localhost;user=root;database=game_shop;password=";
+            MySqlConnection mySqlconnection = new MySqlConnection(con);
+            MySqlCommand cmd;
+            MySqlDataAdapter da;
+            DataTable dt;
+            
+
+            try
+            {
+                mySqlconnection.Open();
+                cmd = new MySqlCommand();
+                cmd.Connection = mySqlconnection;
+                cmd.CommandText = sql;
+                da = new MySqlDataAdapter();
+                da.SelectCommand = cmd;
+                dt = new DataTable();
+                da.Fill(dt);
+
+                gameList.DataSource = dt;
+                gameList.DisplayMember = DisplayMember;
+                gameList.ValueMember = ValueMember;
+
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+
+            }
+            finally
+            {
+                mySqlconnection.Close();
+
+            }
+        }
+
+````
+
+loadCombo metodu potrebno je pozvati kada je admin uspešno izbrisao igricu iz baze.
+
+
+````c#
+
+        private void deleteBtn_Click(object sender, EventArgs e)
+        {
+            string con = "server=localhost;user=root;database=game_shop;password=";
+            MySqlConnection mySqlconnection = new MySqlConnection(con);
+            mySqlconnection.Open();
+            string game = this.gameList.GetItemText(this.gameList.SelectedItem);
+            
+           
+
+            DialogResult Message;
+            Message = MessageBox.Show("Are you sure you want to delete this game?", "Game delete", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (Message == DialogResult.No)
+            {
+                return;
+            }
+            else
+            {
+                string delete = "DELETE FROM games WHERE game_name = " + "\"" + game + "\"";
+                MySqlCommand cmd = new MySqlCommand(delete, mySqlconnection);
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Game deleted");
+            }
+
+
+            string sql = "SELECT * FROM `games`";
+            loadCombo(sql, "game_name", "game_id");
+        }
+
+
+````
+
+
+
+
+
 <a href="create-admin"></a>
 ## Create admin
 
