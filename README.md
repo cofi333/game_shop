@@ -82,6 +82,7 @@ fileName je ime slike koje admin zadaje preko gamePictureName text boxa.
 Nakon toga, ukoliko je sve prošlo kako treba, adminu se ispisuje poruka da je igrica dodata i polja za unos postaju prazna. Ukoliko je došlo do greške, ispisuje se da igrica nije uneta.
 
 ```
+
 private void addBtn_Click(object sender, EventArgs e)
         {
             string con = "server=localhost;user=root;database=game_shop;password=";
@@ -121,7 +122,9 @@ private void addBtn_Click(object sender, EventArgs e)
             mySqlconnection.Close();
 
 
-        }```
+        }
+        
+        ```
         
       
         
