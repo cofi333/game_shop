@@ -252,6 +252,6 @@ loadCombo metodu potrebno je pozvati kada je admin uspešno izbrisao igricu iz b
 Web stranica ima mogućnost prikaza elemenata iz baze podataka. <br/>
 Stranica se osvežava momentalno nakon napravljenih izmena u bazi podataka <br/>
 Korisnici i administratori nemaju mogućnost pristupa administrativnom delu sistema sa veb sajta. <br/>
-<br/>
+
 ![web1.jpg](/assets/web1.jpg) <br/>
 ![web2.jpg](/assets/web2.jpg) 
