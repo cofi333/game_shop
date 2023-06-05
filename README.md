@@ -1,6 +1,6 @@
 # Sadržaj 
 1. [Instalacija](#instalacija)
-2. [Specifickaija projekta](#specifikacija)
+2. [Specifikacija-projekta](#specifikacija)
 
 <a href="instalacija"></a>
 # Instalacija
