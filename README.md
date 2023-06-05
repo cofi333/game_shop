@@ -24,6 +24,8 @@ prodavnica sadrži. Admin aplikacija nam pruža mnoge mogućnosti a neke od njih
 4. mogućnost kreiranja novog admin naloga
 5. prikaz svih igrica iz baze podataka
 
+<br/>
+
 # game_shop
 Softersko inženjerstvo - projekat <br/>
 Filip Kujundžić <br/> 
