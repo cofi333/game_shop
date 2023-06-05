@@ -3,11 +3,11 @@
 ### 2. [Specifikacija projekta](#specifikacija-projekta)
 ### 3. [Baza podataka](#baza-podataka)
 ### 4. [Funkcionalnosti](#funkcionalnosti)
-  1. [Create]
-  2. [Read]
-  3. [Update]
-  4. [Delete]
-  5. [Create admin]
+  1. [Create](#create)
+  2. [Read](#read)
+  3. [Update](#update)
+  4. [Delete](#delete)
+  5. [Create admin](#create-admin)
 
 <br/>
 
@@ -43,6 +43,20 @@ prodavnica sadrži. Admin aplikacija nam pruža mnoge mogućnosti a neke od njih
 
 <a href="funkcionalnosti"></a>
 # Funkcionalnosti
+<a href="create"></a>
+## Create
+
+<a href="read"></a>
+## Read
+
+<a href="update"></a>
+## Update
+
+<a href="delete"></a>
+## Delete
+
+<a href="create-admin"></a>
+## Create admin
 
 <br/>
 # game_shop
