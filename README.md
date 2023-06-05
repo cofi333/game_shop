@@ -146,9 +146,9 @@ game je izabrana igrica iz padajuće liste.
 Ukoliko je admin siguran da želi obrisati igricu iz baze, u sql naredbi prosleđujemo gore deklarisan string game,
 i ispisuje se poruka da je igrica obrisana.
 
-`  string delete = "DELETE FROM games WHERE game_name = " + "\"" + game + "\"";
-                MySqlCommand cmd = new MySqlCommand(delete, mySqlconnection);
-                cmd.ExecuteNonQuery();
+`  string delete = "DELETE FROM games WHERE game_name = " + "\"" + game + "\""; <br>
+                MySqlCommand cmd = new MySqlCommand(delete, mySqlconnection); <br>
+                cmd.ExecuteNonQuery(); <br>
                 MessageBox.Show("Game deleted");` ,
 
 loadCombo metoda omogućava automatsko prikazivanje nove liste iz baze.
